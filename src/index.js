@@ -16,7 +16,7 @@ function reducer(state = InitializeState, action) {
   switch (action.type) {
     case CHECKIN:
       return {
-        ...state,
+        ...state, // 얕은복사만 지원
         visitorName: action.payload.visitorName,
         checkInStatus: true,
         checkInTimestamp: Date.now(),
